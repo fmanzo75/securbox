@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.webxtreme.ssd.securbox.FXMLController">
+   <center>
+      <VBox spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <TextField fx:id="txtUserIp" promptText="user@ip_address" />
+                  <TextField fx:id="txtPassword" promptText="password" />
+                  <TextField fx:id="txtPort" promptText="22" />
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <TextField fx:id="txtCommand" prefWidth="303.0" promptText="Command" />
+                  <Button fx:id="btnEsegui" mnemonicParsing="false" onAction="#handleEsegui" prefWidth="72.0" text="Esegui" />
+                  <Button fx:id="btnConnetti" mnemonicParsing="false" onAction="#handleConnetti" prefWidth="72.0" text="Connetti" />
+               </children>
+            </HBox>
+            <TextArea fx:id="txtResult" prefWidth="200.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <top>
+      <Label text="Connection Securbox" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
